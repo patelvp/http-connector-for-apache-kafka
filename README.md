@@ -1,3 +1,13 @@
+# Building on M1
+```cmd
+ docker build -t http .
+```
+* Platform flag is needed since the adoptopenjdk/openjdk11:alpine-jre image is not build for arm platform that m1 macs are on *
+
+
+# For testing
+- Basic http echo server `docker run -p 8085:8080 -p 8443:8443 --rm -t mendhak/http-https-echo:26`
+
 # Aiven's HTTP Sink Connector for Apache Kafka®
 
 ![HTTP logo](docs/IETF-Badge-HTTP.png)
